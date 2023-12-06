@@ -1,0 +1,29 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'ARMPipeline-conn'
+    subscriptionId: '2e90ef6b-b015-4284-914f-30032976794d'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'ARMPipeline-rg'
+    location: 'Central US'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/deepanredhat/Azure_ARM/main/template.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/deepanredhat/Azure_ARM/main/Vnet1.json'
+    overrideParameters: '-projectName ARMPipelineProj'
+    deploymentMode: 'Incremental'
+    deploymentName: 'DeployPipelineTemplate'
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
