@@ -20,6 +20,6 @@ steps:
     location: 'Central US'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/Azure/azure-docs-json-samples/master/get-started-deployment/linked-template/azuredeploy.json'
-    overrideParameters: '-projectName armcicd2023'
+    overrideParameters: '-projectName robocicd'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
