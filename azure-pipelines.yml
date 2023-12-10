@@ -20,6 +20,6 @@ steps:
     location: 'Central US'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/Azure/azure-docs-json-samples/master/get-started-deployment/linked-template/azuredeploy.json'
-    overrideParameters: '-projectName ARMcicdProj'
+    overrideParameters: '-projectName armcicd2023'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
