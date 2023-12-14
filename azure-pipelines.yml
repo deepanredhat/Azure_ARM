@@ -18,7 +18,6 @@ steps:
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'sarpettaparambarai'
     location: 'Central US'
-    templateLocation: 'Linked artifact'
     deploymentMode: 'Incremental'
     deploymentName: 'Create a RG'
 - task: AzureResourceManagerTemplateDeployment@3
