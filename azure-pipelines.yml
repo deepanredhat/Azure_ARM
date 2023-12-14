@@ -41,7 +41,7 @@ steps:
     deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'ARMPipeline-conn'
     subscriptionId: '2e90ef6b-b015-4284-914f-30032976794d'
-    action: 'Create Or Update Resource Group'
+    action: 'DeleteRG'
     resourceGroupName: 'sarpettaparambarai'
     location: 'Central US'
     templateLocation: 'URL of the file'
@@ -49,4 +49,3 @@ steps:
     csmParametersFileLink: 'https://raw.githubusercontent.com/deepanredhat/Azure_ARM/main/Vnet1.json'
     deploymentMode: 'Incremental'
     deploymentName: 'Deployvnet'
-
