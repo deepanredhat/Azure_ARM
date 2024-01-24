@@ -1,0 +1,105 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "westus3"
+    },
+    "networkInterfaceName1": {
+      "value": "porali527_z1"
+    },
+    "networkSecurityGroupName": {
+      "value": "porali-nsg"
+    },
+    "networkSecurityGroupRules": {
+      "value": [
+        {
+          "name": "RDP",
+          "properties": {
+            "priority": 300,
+            "protocol": "TCP",
+            "access": "Allow",
+            "direction": "Inbound",
+            "sourceAddressPrefix": "*",
+            "sourcePortRange": "*",
+            "destinationAddressPrefix": "*",
+            "destinationPortRange": "3389"
+          }
+        },
+        {
+          "name": "HTTP",
+          "properties": {
+            "priority": 320,
+            "protocol": "TCP",
+            "access": "Allow",
+            "direction": "Inbound",
+            "sourceAddressPrefix": "*",
+            "sourcePortRange": "*",
+            "destinationAddressPrefix": "*",
+            "destinationPortRange": "80"
+          }
+        }
+      ]
+    },
+    "subnetName": {
+      "value": "default"
+    },
+    "virtualNetworkId": {
+      "value": "/subscriptions/bdd69d62-23b8-4518-a494-53a777eb2d26/resourceGroups/robo/providers/Microsoft.Network/virtualNetworks/DRRVNet1"
+    },
+    "publicIpAddressName1": {
+      "value": "porali-ip"
+    },
+    "publicIpAddressType": {
+      "value": "Static"
+    },
+    "publicIpAddressSku": {
+      "value": "Standard"
+    },
+    "pipDeleteOption": {
+      "value": "Detach"
+    },
+    "virtualMachineName": {
+      "value": "porali"
+    },
+    "virtualMachineName1": {
+      "value": "porali"
+    },
+    "virtualMachineComputerName1": {
+      "value": "porali"
+    },
+    "virtualMachineRG": {
+      "value": "robo"
+    },
+    "osDiskType": {
+      "value": "Premium_LRS"
+    },
+    "osDiskDeleteOption": {
+      "value": "Delete"
+    },
+    "virtualMachineSize": {
+      "value": "Standard_B2ms"
+    },
+    "nicDeleteOption": {
+      "value": "Detach"
+    },
+    "hibernationEnabled": {
+      "value": false
+    },
+    "adminUsername": {
+      "value": "redhat"
+    },
+    "adminPassword": {
+      "value": "Redhat12345678"
+    },
+    "patchMode": {
+      "value": "AutomaticByOS"
+    },
+    "enableHotpatching": {
+      "value": false
+    },
+    "virtualMachine1Zone": {
+      "value": "1"
+    }
+  }
+}
