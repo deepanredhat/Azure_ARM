@@ -22,4 +22,4 @@ steps:
     csmFileLink: 'https://github.com/deepanredhat/Azure_ARM/blob/main/VM_Template/template.json'
     csmParametersFileLink: 'https://github.com/deepanredhat/Azure_ARM/blob/main/VM_Template/parameters.json'
     deploymentMode: 'Complete'
-    deploymentName: 'VM_deployement'
+    deploymentName: 'VM_deployement V1'
