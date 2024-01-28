@@ -13,13 +13,13 @@ steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'devopsparambarai(2)(bdd69d62-23b8-4518-a494-53a777eb2d26)'
+    azureResourceManagerConnection: 'devopsparambarai(bdd69d62-23b8-4518-a494-53a777eb2d26)'
     subscriptionId: 'bdd69d62-23b8-4518-a494-53a777eb2d26'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'robo'
     location: 'West US 3'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://github.com/deepanredhat/Azure_ARM/blob/main/VM_Template/template.json'
-    csmParametersFileLink: 'https://github.com/deepanredhat/Azure_ARM/blob/main/VM_Template/parameters.json'
-    deploymentMode: 'Complete'
-    deploymentName: 'VMdeploy'
+    csmFileLink: 'https://raw.githubusercontent.com/deepanredhat/Azure_ARM/main/VM_Template/template.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/deepanredhat/Azure_ARM/main/VM_Template/parameters.json'
+    deploymentMode: 'Incremental'
+    deploymentName: 'VM_Deployement'
